@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Brussels.FlightSearch"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="Brussels.FlightSearch.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="textColor">#FFFFFFFF</Color>
+            <Color x:Key="entrycolor">#FF1F3A6F</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="85*"/>
+            </Grid.RowDefinitions>
+
+            <Image Margin="10" Grid.Row="0"  WidthRequest="20" >
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <OnPlatform.Android>
+                            <FileImageSource File="logo.png"/>
+                        </OnPlatform.Android>
+                        <OnPlatform.WinPhone>
+                            <FileImageSource File="Assets/Flight/logo.png"/>
+                        </OnPlatform.WinPhone>
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
+
+            <RelativeLayout Grid.Row="1">
+                <Image Opacity="0.9"  
+                       Aspect="Fill"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <OnPlatform.Android>
+                                <FileImageSource File="bg2.png"/>
+                            </OnPlatform.Android>
+                            <OnPlatform.WinPhone>
+                                <FileImageSource File="Assets/Flight/bg2.png"/>
+                            </OnPlatform.WinPhone>
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+                <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}" 
+                      Grid.Row="1" >
+                    <Grid x:Name="SearchGrid"  Margin="25,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="85*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <StackLayout Spacing="10" Orientation="Horizontal" HorizontalOptions="Start">
+                            <Image  x:Name="BackButton" WidthRequest="25" HorizontalOptions="StartAndExpand" VerticalOptions="Center" >
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="BackButton_Tapped" />
+                                </Image.GestureRecognizers>
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <OnPlatform.Android>
+                                            <FileImageSource File="back.png"/>
+                                        </OnPlatform.Android>
+                                        <OnPlatform.WinPhone>
+                                            <FileImageSource File="Assets/Flight/back.png"/>
+                                        </OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
+                            <Label FontSize="Medium" TextColor="{StaticResource textColor}" Text="Search" HorizontalOptions="StartAndExpand" VerticalOptions="Center" />
+                        </StackLayout>
+
+                        <Grid x:Name="SearchCriteria"  Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20*"/>
+                                <ColumnDefinition Width="80*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="10*"/>
+                                <RowDefinition Height="30*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" VerticalOptions="Center" TextColor="{StaticResource textColor}" FontSize="11" Text="Select Airlines"/>
+                            <Label Grid.Row="2" Grid.Column="0" VerticalOptions="Center" TextColor="{StaticResource textColor}" FontSize="11" Text="Flight Number"/>
+                            <Label Grid.Row="4" Grid.Column="0" VerticalOptions="Center" TextColor="{StaticResource textColor}" FontSize="11" Text="Select Date"/>
+
+                            <Picker x:Name="pickerAirlines" Grid.Row="0" Grid.Column="1" TextColor="{StaticResource entrycolor}" BackgroundColor="#FFFFFFFF" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+                                    ItemsSource="{Binding FlightList}" 
+                                    ItemDisplayBinding="{Binding AirlineName}" 
+                                    SelectedItem="{Binding SelectedAirline}" />
+
+                            <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Spacing="0">
+                                <Entry x:Name="TextAirlineCode" TextColor="{StaticResource entrycolor}"  BackgroundColor="#FFFFFFFF" WidthRequest="50" VerticalOptions="CenterAndExpand" Text="{Binding SelectedAirline.AirlineCode}" />
+                                <Entry x:Name="TextFlightNumber" TextColor="{StaticResource entrycolor}" Placeholder = "Enter Number"  PlaceholderColor="#FFE1E2E8" BackgroundColor="#FFFFFFFF" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  Text="{Binding SelectedAirline.FlightNumber}"/>
+                            </StackLayout>
+
+                            <DatePicker Grid.Row="4" Grid.Column="1" x:Name="StartDatePicker" BackgroundColor="#FFFFFFFF" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+                                        Date="{Binding flightSearchModel.StartDate}"  />
+
+                            <Button Grid.Row="6" Grid.Column="1" WidthRequest="150" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Clicked="Button_Clicked" TextColor="{StaticResource textColor}" BackgroundColor="#FFB62719" Text="Search"/>
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </RelativeLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

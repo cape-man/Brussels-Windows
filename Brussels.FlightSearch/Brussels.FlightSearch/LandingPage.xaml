@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Brussels.FlightSearch"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="Brussels.FlightSearch.LandingPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="textColor">#FFFFFFFF</Color>
+            <Color x:Key="entrycolor">#FF1F3A6F</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="85*"/>
+            </Grid.RowDefinitions>
+
+            <Image Margin="10" Grid.Row="0"  WidthRequest="20">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <OnPlatform.Android>
+                            <FileImageSource File="logo.png"/>
+                        </OnPlatform.Android>
+                        <OnPlatform.WinPhone>
+                            <FileImageSource File="Assets/Flight/logo.png"/>
+                        </OnPlatform.WinPhone>
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
+
+            <RelativeLayout Grid.Row="1">
+                <Image Opacity="0.4"  
+                       Aspect="Fill"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                    <Image.Source>
+                        <OnPlatform x:TypeArguments="ImageSource">
+                            <OnPlatform.Android>
+                                <FileImageSource File="bg1.png"/>
+                            </OnPlatform.Android>
+                            <OnPlatform.WinPhone>
+                                <FileImageSource File="Assets/Flight/bg1.png"/>
+                            </OnPlatform.WinPhone>
+                        </OnPlatform>
+                    </Image.Source>
+                </Image>
+                <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}" >
+
+                    <Grid x:Name="TilesGrid"   Margin="25,0,25,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="30*"/>
+                            <RowDefinition Height="20*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Grid.Row="1" Grid.Column="0" Spacing="30" WidthRequest="100" HeightRequest="100" BackgroundColor="#FFB62719" >
+                            <Image WidthRequest="40"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" Margin="20,20,0,0">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <OnPlatform.Android>
+                                            <FileImageSource File="book_flight_white.png"/>
+                                        </OnPlatform.Android>
+                                        <OnPlatform.WinPhone>
+                                            <FileImageSource File="Assets/Flight/book_flight_white.png"/>
+                                        </OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
+                                   
+                            <Label FontSize="Micro" TextColor="{StaticResource textColor}" Text="Book a Flight" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Margin="20,0,0,0" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" Grid.Column="1" Spacing="25" WidthRequest="100" HeightRequest="100" BackgroundColor="#FFB62719" >
+                            <Image WidthRequest="40" HorizontalOptions="StartAndExpand" VerticalOptions="Start" Margin="20,20,0,0">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <OnPlatform.Android>
+                                            <FileImageSource File="checkin_white.png"/>
+                                        </OnPlatform.Android>
+                                        <OnPlatform.WinPhone>
+                                            <FileImageSource File="Assets/Flight/checkin_white.png"/>
+                                        </OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
+                            <Label FontSize="Micro" TextColor="{StaticResource textColor}" Text="Check In / My Flights" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" Margin="20,0,10,0" />
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2" Grid.Column="0" Spacing="25" WidthRequest="100" HeightRequest="100" BackgroundColor="#FFB62719">
+                            <Image WidthRequest="40"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" Margin="20,20,0,0">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <OnPlatform.Android>
+                                            <FileImageSource File="boardingpass_white.png"/>
+                                        </OnPlatform.Android>
+                                        <OnPlatform.WinPhone>
+                                            <FileImageSource File="Assets/Flight/boardingpass_white.png"/>
+                                        </OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
+                            <Label FontSize="Micro" TextColor="{StaticResource textColor}" Text="My Boarding Pass" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="20,0,0,0"/>
+                        </StackLayout>
+
+                        <StackLayout x:Name="TileFlightStatus" Grid.Row="2" Grid.Column="1" Spacing="30" WidthRequest="100" HeightRequest="100" BackgroundColor="#FFFFFFFF" >
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TileFlightStatus_Tapped" />
+                            </StackLayout.GestureRecognizers>
+                            <Image WidthRequest="40"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" Margin="20,20,0,0">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <OnPlatform.Android>
+                                            <FileImageSource File="flight_status_red.png"/>
+                                        </OnPlatform.Android>
+                                        <OnPlatform.WinPhone>
+                                            <FileImageSource File="Assets/Flight/flight_status_red.png"/>
+                                        </OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
+                            <Label FontSize="Micro" TextColor="#FFE33417" Text="Flight Status" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="20,0,0,0"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </RelativeLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

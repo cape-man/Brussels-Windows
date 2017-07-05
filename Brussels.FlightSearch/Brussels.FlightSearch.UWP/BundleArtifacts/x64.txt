@@ -1,0 +1,2 @@
+MainPackage=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\bin\x64\Debug\Brussels.FlightSearch.UWP_1.0.3.0_x64_Debug.appx
+SymbolPackage=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\AppPackages\Brussels.FlightSearch.UWP_1.0.3.0_Debug_Test\Brussels.FlightSearch.UWP_1.0.3.0_x64_Debug.appxsym

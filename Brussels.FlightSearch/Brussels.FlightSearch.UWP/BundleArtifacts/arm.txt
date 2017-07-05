@@ -1,0 +1,6 @@
+MainPackage=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\bin\ARM\Debug\Brussels.FlightSearch.UWP_1.0.3.0_ARM_Debug.appx
+SymbolPackage=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\AppPackages\Brussels.FlightSearch.UWP_1.0.3.0_Debug_Test\Brussels.FlightSearch.UWP_1.0.3.0_ARM_Debug.appxsym
+ResourcePack=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\bin\ARM\Debug\Brussels.FlightSearch.UWP_1.0.3.0_scale-100.appx
+ResourcePack=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\bin\ARM\Debug\Brussels.FlightSearch.UWP_1.0.3.0_scale-125.appx
+ResourcePack=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\bin\ARM\Debug\Brussels.FlightSearch.UWP_1.0.3.0_scale-150.appx
+ResourcePack=D:\MyProjects\ABG\MDMS\POC_Working\BrusselsTFS\Brussels.FlightSearch\Brussels.FlightSearch.UWP\bin\ARM\Debug\Brussels.FlightSearch.UWP_1.0.3.0_scale-400.appx

@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="Brussels.FlightSearch.UWP.UWPFlightStatusView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Brussels.FlightSearch.UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.ColumnSpan="3" Source="Assets/Flight/flight_details_background.png" Stretch="Fill" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Source="Assets/Flight/takeoff.png" Width="30"/>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="tbScheduledTime" VerticalAlignment="Center" FontWeight="SemiBold" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="23" Text="BRUSSEL"/>
+                <TextBlock x:Name="tbActualTime" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="15" Text="BRUSSEL"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <TextBlock x:Name="tbDepartureAirportCode" VerticalAlignment="Center" FontWeight="SemiBold" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="23" Text="BRUSSEL"/>
+                <TextBlock x:Name="tbDepartureCityName" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="15" FontWeight="SemiBold" Text="BRUSSEL"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image Source="Assets/Flight/forward.png" Height="17"/>
+            <TextBlock x:Name= "tbFlightTime" FontSize="15" Foreground="White"/>
+        </StackPanel>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Source="Assets/Flight/landing.png" Width="30"/>
+            <StackPanel Grid.Row="1">
+                <TextBlock x:Name="tbScheduledArrivalTime" VerticalAlignment="Center" FontWeight="SemiBold" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="23" Text="BRUSSEL"/>
+                <TextBlock x:Name="tbActualArrivalTime" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="15" Text="BRUSSEL"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2">
+                <TextBlock x:Name="tbArrivalAirportCode"  VerticalAlignment="Center" FontWeight="SemiBold" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="23" Text="BRUSSEL"/>
+                <TextBlock x:Name="tbArrivalCityName"   VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Foreground="White" FontSize="15" Text="BRUSSEL"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,119 @@
+﻿{
+  "Flights": [
+    {
+      "FlightId": 1,
+      "AirlineName": "Brussels Airlines",
+      "AirlineCode": "SN",
+      "FlightNumber": "1234",
+      "AircraftType": "Airbus A319",
+      "IconPath": "Assets\\Flight\\brussels_logo.png"
+    },
+    {
+      "FlightId": 2,
+      "AirlineName": "Lufthansa Airlines",
+      "AirlineCode": "LH",
+      "FlightNumber": "5678",
+      "AircraftType": "Airbus A319",
+      "IconPath": "Assets\\Flight\\brussels_logo.png"
+    },
+    {
+      "FlightId": 3,
+      "AirlineName": "Qantas Airlines",
+      "AirlineCode": "QF",
+      "FlightNumber": "8765",
+      "AircraftType": "Airbus A319",
+      "IconPath": "Assets\\Flight\\brussels_logo.png"
+    },
+    {
+      "FlightId": 4,
+      "AirlineName": "Emirates Airline",
+      "AirlineCode": "EK",
+      "FlightNumber": "4321",
+      "AircraftType": "Airbus A319",
+      "IconPath": "Assets\\Flight\\brussels_logo.png"
+    }
+  ],
+  "FlightSchedules": [
+    {
+      "FlightScheduleId": 1,
+      "DepartureDateTime": "2017-06-23T10:00:00",
+      "DepartureAirportCode": "BRU",
+      "DepartureCityName": "Brussels",
+      "ArrivalAirportCode": "ORD",
+      "ArrivalCityName": "Chicago",
+      "FlightStatus": "On time",
+      "ScheduledDepatureDateTime": "2017-06-23T10:00:00",
+      "ScheduledArrivalDateTime": "2017-06-23T12:00:00",
+      "EstimatedDepartureDateTime": "2017-06-23T10:16:00",
+      "EstimatedArrivalDateTime": "2017-06-23T12:16:00",
+      "ActualDepatureDateTime": "2017-06-23T10:16:00",
+      "ActualArrivalDateTime": "2017-06-23T12:16:00",
+      "DepartureCountryName": "Belgium",
+      "ArrivalCountryName": "US",
+      "DepartureGateNumber": "B15",
+      "BaggageBeltNumber": "5",
+      "FlightId": 1
+    },
+    {
+      "FlightScheduleId": 2,
+      "DepartureDateTime": "2017-06-23T10:00:00",
+      "DepartureAirportCode": "BRU",
+      "DepartureCityName": "Brussels",
+      "ArrivalAirportCode": "FRA",
+      "ArrivalCityName": "Frankfurt",
+      "FlightStatus": "On time",
+      "ScheduledDepatureDateTime": "2017-06-23T10:00:00",
+      "ScheduledArrivalDateTime": "2017-06-23T12:00:00",
+      "EstimatedDepartureDateTime": "2017-06-23T10:16:00",
+      "EstimatedArrivalDateTime": "2017-06-23T12:16:00",
+      "ActualDepatureDateTime": "2017-06-23T10:16:00",
+      "ActualArrivalDateTime": "2017-06-23T12:16:00",
+      "DepartureCountryName": "Belgium",
+      "ArrivalCountryName": "Germany",
+      "DepartureGateNumber": "B17",
+      "BaggageBeltNumber": "6",
+      "FlightId": 2
+    },
+    {
+      "FlightScheduleId": 3,
+      "DepartureDateTime": "2017-06-23T10:00:00",
+      "DepartureAirportCode": "BRU",
+      "DepartureCityName": "Brussels",
+      "ArrivalAirportCode": "SYD",
+      "ArrivalCityName": "Sydney",
+      "FlightStatus": "On time",
+      "ScheduledDepatureDateTime": "2017-06-23T10:00:00",
+      "ScheduledArrivalDateTime": "2017-06-23T12:00:00",
+      "EstimatedDepartureDateTime": "2017-06-23T10:16:00",
+      "EstimatedArrivalDateTime": "2017-06-23T12:16:00",
+      "ActualDepatureDateTime": "2017-06-23T10:16:00",
+      "ActualArrivalDateTime": "2017-06-23T12:16:00",
+      "DepartureCountryName": "Belgium",
+      "ArrivalCountryName": "Australia",
+      "DepartureGateNumber": "B21",
+      "BaggageBeltNumber": "7",
+      "FlightId": 3
+    },
+    {
+      "FlightScheduleId": 4,
+      "DepartureDateTime": "2017-06-23T10:00:00",
+      "DepartureAirportCode": "BRU",
+      "DepartureCityName": "Brussels",
+      "ArrivalAirportCode": "DBX",
+      "ArrivalCityName": "Dubai",
+      "FlightStatus": "On time",
+      "ScheduledDepatureDateTime": "2017-06-23T10:00:00",
+      "ScheduledArrivalDateTime": "2017-06-23T12:00:00",
+      "EstimatedDepartureDateTime": "2017-06-23T10:16:00",
+      "EstimatedArrivalDateTime": "2017-06-23T12:16:00",
+      "ActualDepatureDateTime": "2017-06-23T10:16:00",
+      "ActualArrivalDateTime": "2017-06-23T12:16:00",
+      "DepartureCountryName": "Belgium",
+      "ArrivalCountryName": "Dubai",
+      "DepartureGateNumber": "C9",
+      "BaggageBeltNumber": "3",
+      "FlightId": 4
+    }
+
+  ]
+}
